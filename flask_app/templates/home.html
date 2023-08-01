@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css"
+      rel="stylesheet"
+    />
+<!-- MDB -->
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"
+  ></script>
+    <title>Home</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      
+        <img src="{{ url_for('static', filename='images/lugon.png') }}" alt="lab_logo" class="logo" width="200px"; height="200px">
+        <div class="container-fluid">
+          
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarRightAlignExample"
+            aria-controls="navbarRightAlignExample"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+      
+         
+          <div class="collapse navbar-collapse" id="navbarRightAlignExample">
+            
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/specialities">Our Specialities</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/services">Our services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/patient_log">Patient</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/admin_log">Admin</a>
+              </li>
+            </ul>
+           
+          </div>
+         
+        </div>
+       
+      </nav>
+      
+      <body>
+ 
+<div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-mdb-target="#carouselBasicExample"
+        data-mdb-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-mdb-target="#carouselBasicExample"
+        data-mdb-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-mdb-target="#carouselBasicExample"
+        data-mdb-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+  
+    <!-- Inner -->
+    <div class="carousel-inner">
+      <!-- Single item -->
+      <div class="carousel-item active">
+        <img src="{{ url_for('static', filename='images/lab3.jpg') }}" class="d-block w-100" alt="Sunset Over the City"/>
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Welcome to our Medical Laboratory</h1>
+        </div>
+      </div>
+  
+      <!-- Single item -->
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/lab2.jpg') }}" class="d-block w-100" alt="Canyon at Nigh"/>
+        <div class="carousel-caption d-none d-md-block">
+            <h1>Thank you for choosing to explore our Medical Laboratory Website.</h1>
+        </div>
+      </div>
+  
+      <!-- Single item -->
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='images/lab1.jpg') }}" class="d-block w-100" alt="Cliff Above a Stormy Sea"/>
+        <div class="carousel-caption d-none d-md-block">
+            <h1> We aim to provide you with valuable information, ignite inspiration, and open the doors to the captivating realm of scientific exploration.    </h1>
+        </div>
+      </div>
+    </div>
+    <!-- Inner -->
+  
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div> <br>
+  <br>
+
+  <!-- Carousel wrapper -->
+  <div>
+    <div class="card">
+      <h5 class="card-header">Appointment</h5>
+      <div class="card-body">
+        <p class="card-text">Book an appointment</p>
+        <a href="/patient_log" class="btn btn-danger">Book an appointment</a>
+      </div>
+    </div>
+  <div class="card">
+    <h5 class="card-header">Services</h5>
+    <div class="card-body">
+      <p class="card-text">The medical analysis laboratory technician takes and processes biological samples (blood, urine, etc.) in order to better prevent or treat illnesses.</p>
+      <a href="/services" class="btn btn-danger">Our services</a>
+    </div>
+  </div>
+  <div class="card">
+    <h5 class="card-header">Specialities</h5>
+    <div class="card-body">
+
+      <p class="card-text">Laboratory technicians use laboratory techniques (analysis, microscopy, immunology, bacteriology virology, hematology, etc.) to help diagnose diseases and better understand how the body works.</p>
+      <a href="/specialities" class="btn btn-danger">Our specialities</a><br>
+      <br>
+      <h1>Feedbacks</h1>
+      <div class="feedback">
+        {%for feedback in all_feedbacks %}
+         {{feedback.patients.first_name}} {{feedback.patients.last_name}}<br>
+         {{feedback.description}}<br>
+        
+        {%endfor%}
+      </div>
+    </div>
+  </div>
+</div> <br>
+
+</body>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-white text-muted">
+    <!-- Section: Social media -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <img src="{{ url_for('static', filename='images/lugon.png') }}" alt="lab_logo" class="logo" width="200px"; height="200px">
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3 text-secondary"></i> 20,Ariana,Tunis</p>
+            <p>
+              <i class="fas fa-envelope me-3 text-secondary"></i>
+              pandalab@gmail.com
+            </p>
+            <p><i class="fas fa-phone me-3 text-secondary"></i> 28 506 111</p>
+
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+                Biologists at your disposal
+            </h6>
+            <p>
+                Dr.Khouloud Chaabani
+            </p>
+            <p>
+                Dr.Aymen Khammasi
+            </p>
+            <p>
+                Dr.Mariem Jouini
+            </p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+  </footer>
+  <!-- Footer -->
+</html>

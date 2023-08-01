@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_specialites.css') }}">
+</head>
+    <title>Specialities</title>
+</head>
+<body>
+  <header class="header">
+    <img src="{{ url_for('static', filename='images/lugon.png') }}" alt="lab_logo" class="logo" width="200px"; height="200px">
+    <nav class="navbar">
+    <a href="/">Home</a>
+    <a href="/specialities">Our specialities</a>
+    <a href="/services">Our services</a>
+    <a href="/patient_log">Patient</a>
+    <a href="/admin_log">Admin</a>
+    </nav>
+</header><br>
+    <section class="specialities-section">
+        <div class="container">
+          <div class="row">
+            
+          <div class="col-md-12" id="ser">
+              <h2 class="section-title text-center" style="color: rgb(76, 10, 138); margin-top:80px">Specialities</h2>
+          </div>
+          <div class="b" style=" margin: 20 px;"><br>
+            <h3 style="color: rgb(41, 4, 75); ">Biochemistry</h3> <br>
+              <div class="services-box" style="display: flex;align-items:center; ">
+                <img style="margin-left: 20 px;" src="{{ url_for('static', filename='images/biochimie.jpg') }}" alt="" width="150px" height="150px">
+              <div class="tex">
+                <p >Biochemistry is the determination of molecules contained in body fluids (blood, cerebrospinal fluid, urine, etc.) that may be involved in a pathology.</p>
+              </div>
+              </div>
+            
+          </div> <br>
+          
+          
+          <div class="b">
+            <h3 style="color: rgb(41, 4, 75);">Hormonology</h3> <br>
+               <div class="specialities-box" style="display: flex;align-items:center">
+             
+               <img src="{{ url_for('static', filename='images/hormono.jpg') }}" alt="" width="150px" height="150px">
+               <div class="tex">
+                <p>Hormonal assays make it possible to participate in the diagnosis of endocrine dysfunctions and to monitor the evolution of its pathologies and their treatment.
+                  Marker assays make it possible to diagnose and monitor the evolution of tumor pathologies.
+                </p>
+              </div>
+            </div>
+          </div> <br>
+          
+          
+         <div class="b"> <br>
+          <h3 style="color: rgb(41, 4, 75);">Hemostase</h3><br>
+               <div class="speciaities-box" style="display: flex;align-items:center;">
+
+               <img src="{{ url_for('static', filename='images/hemostase.jpg') }}" alt="" width="150px" height="150px">
+               <div class="tex">
+                <p>Hemostasis corresponds to all the physiological phenomena to stop bleeding in case of rupture of a blood vessel</p>
+               </div>
+              </div>
+          </div>  
+          
+          <div class="b"><br>
+            <h3 style="color: rgb(41, 4, 75);">Immunology</h3><br>
+               <div class="activities-box" style="display: flex;align-items:center;">
+             
+               <img src="{{ url_for('static', filename='images/immunalogie.jpg') }}" alt="" width="150px" height="150px">
+               <div class="tex">
+                <p>Infectious serology:
+                   Infectious serology is used to detect and measure antibodies and/or anitgens specific to certain infectious agents, which makes it possible to diagnose infections.</p>
+                </div>
+             </div>
+          </div> <br>
+          
+          
+           <div class="b">
+            <h3 style="color: rgb(41, 4, 75);">Allergology</h3><br>
+               <div class="activities-box" style="display: flex;align-items:center;">
+       
+               <img src="{{ url_for('static', filename='images/allergo.jpg') }}" alt="" width="150px" height="150px">
+               <div class="tex">
+             <p>Allergy is an abnormal and specific reaction of an organism in contact with a foreign substance (allergen),these foreign substances do not cause disorders in most subjects.
+              The identification of allergens responsible for allergic manifestations is an essential step to identify the allergic nature of clinical manifestations observed in a patient and thus implement the appropriate therapeutic strategy. Our examinations consist of a possible detection coupled with a quantification of serum specific IgE</p>
+               </div>
+            </div>
+          </div>
+          
+       
+          
+          
+        </div>
+     </div>
+    </section>
+     <footer>
+      <div class="container" style="margin-top: 200px;">
+          <img src="{{ url_for('static', filename='images/lugon.png') }}" alt="lab_logo" class="logo" width="200px"; height="200px">
+      <div class="row">
+      <div class="col-m-4 footer-box">
+          <p> <b> contact us</b></p>
+          <p><img src="{{ url_for('static', filename='images/tel.png') }}" alt="phone_icon" class="icons"> 28 506 111</p>
+          <p><img src="{{ url_for('static', filename='images/email-removebg-preview.png') }}" alt="email_icon" class="icons"> panda_lab@gmail.com</p>
+          <p><img src="{{ url_for('static', filename='images/locali.png') }}" alt="loc_icon" class="loc"> 20,Ariana,Tunisie</p>
+          <p><img src="{{ url_for('static', filename='images/face.png') }}" alt="fb_icon" class="icons"> Panda laboratory</p>
+          <p> <img src="{{ url_for('static', filename='images/instag.png') }}" alt="insta_logo" class="icons"> Panda laboratory Tunisia</p>
+      
+      </div>
+      </div>
+      <div class="col-m-7 footer-box">
+          <p><b> Biologistes at your disposal</b></p>
+          <p>Dr.Khouloud Chaabani</p>
+          <p>Dr. Aymen Khammasi</p>
+          <p>Dr.Mariem Jouini</p>
+          </div>
+      </div>
+      </footer>
+
+</body>
+</html>

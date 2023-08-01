@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css">
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+  <title>Medical Analysis Form</title>
+</head>
+<body>
+  
+  <header class="header">
+    <img src="{{ url_for('static', filename='images/lugon.png') }}" alt="lab_logo" class="logo" width="200px"; height="200px">
+    <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/specialities">Our specialities</a>
+        <a href="/services">Our services</a>
+        <a href="/patient_log">Patient</a>
+        <a href="/logout_p">LOG OUT</a>
+    </nav>
+</header>
+
+  <div class="container mt-5" style="border:rgb(212, 52, 207) solid 2px ; padding : 30px ;" >
+    <h2>Medical Analysis Form</h2>
+    <form action="/appointment_create" method="post">
+      <div class="form-group">
+        <label for="analysisSelect">Choose Your Analysis:</label>
+        
+        <select class="form-control" id="analysisSelect" name="analysis_id">
+            <option>Select Analysis</option>
+            {% for analysis in analysis %}
+            <option value="{{ analysis.id }}">{{ analysis.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+      <!-- <div class="form-group">
+        <label for="dateSelect">Choose Day:</label>
+        <input type="date" class="form-control" id="dateSelect">
+      </div> -->
+      <div class="form-group">
+        <label for="appointmentDate">Choose a date:</label>
+        <input type="date" class="form-control" name="date">
+      </div>
+      <div id="calendar"></div>
+
+  
+
+  
+      <div class="form-group">
+        <label for="prescription">Prescription:</label>
+        <input type="file" id="prescription" name="prescription" class="form-control-file">
+      </div> 
+
+      <button type="submit" class="btn btn-primary">Make an appointment</button>
+    </form>
+  </div>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('input[name="userType"]').change(function() {
+        if ($(this).val() === 'family') {
+          $('#selfUserFields').hide();
+          $('#familyUserFields').show();
+        } else {
+          $('#familyUserFields').hide();
+          $('#selfUserFields').show();
+        }
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      // Obtenir la liste des jours disponibles (par exemple, à partir d'une source de données backend)
+      var joursDisponibles = ["2023-06-12", "2023-06-13", "2023-06-14", "2023-06-15"];
+      var joursIndisponibles = ["2023-06-16", "2023-06-17"];
+    
+      // Initialiser le calendrier FullCalendar
+      $('#calendar').fullCalendar({
+        selectable: true,
+        select: function(start, end) {
+          // Gérer la sélection d'une date
+          var selectedDate = moment(start).format('YYYY-MM-DD');
+          console.log("Date sélectionnée :", selectedDate);
+        },
+        events: joursDisponibles.map(function(date) {
+          return {
+            start: date,
+            end: date,
+            rendering: 'background',
+            color: '#b9e2f8'
+          };
+        }).concat(joursIndisponibles.map(function(date) {
+          return {
+            start: date,
+            end: date,
+            rendering: 'background',
+            color: '#f8b9b9'
+          };
+        }))
+      });
+    });
+  </script> -->
+</body>
+</html>

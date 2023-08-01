@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,500&display=swap');
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none; border: none;
+  text-transform: capitalize;
+  transition: all .2s ease-out ;
+  text-decoration: none;
+
+
+}
+
+
+.services-section{
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+  width: 150px;
+  height: 150px;
+
+}
+.header{
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  height:150px;
+  max-width:100%;
+  padding: 2rem 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .navbar a{
+font-size: 1rem;
+color: rgb(69, 34, 121);
+margin-left: 2rem;
+}
+.header .navbar a:hover{
+color: rgb(108, 217, 234);
+}
+
+
+footer .container{
+    margin-top: 500px;
+    color: #2b022e;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 70px;
+}
+    
+.icons{
+    width: 25px;height: 25px;
+    
+  }
+  .loc{
+    width:25px ;
+    height:40px ;
+  }
+  
+  
+  @media (max-width:991px){
+    html{
+      font-size: 55%;
+    }
+    .header{
+      padding: 2rem;
+    }
+  }
+  @media (max-width:768px){
+  .header .navbar{
+    position: absolute;
+    top: 115%; right: 2rem;
+    border-radius: 5rem;
+    box-shadow: rgb(119, 156, 157);
+    width: 30rem;
+    background-color: rgb(217, 211, 224);
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: top right;
+    transition: none;
+  
+  }
+  .header .navbar{
+    font-size: 2rem;
+    display: block;
+    margin: 2.5rem;
+  }
+  }
+  @media (max-width:450px){
+    html{
+      font-size: 50%;
+  }
+  }
+
+.tex{
+  margin-left: 20px;
+}
+#ser{
+  width: 100%;
+  height: 200px;
+  background-image: url('/static/images/prescription.jpg');
+  margin-bottom: 40px;
+}
+#serv{
+  width: 100%;
+  height: 200px;
+  background-image: url('/static/images/prescription.jpg');
+  margin-bottom: 40px;
+}
+

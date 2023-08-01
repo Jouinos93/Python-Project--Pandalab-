@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- <link rel="stylesheet" href="/panda_lab_project/flask_app/static/style_home.css"> -->
+  <!-- linking a css style sheet -->
+  <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_log.css') }}"> -->
+  <title>Tableau de bord du technicien biologiste</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+
+  <style>
+    .container {
+      margin-top: 50px;
+    }
+    .fds{
+      margin: 40px;
+      margin-left:400px;
+    }
+   
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <img src="{{ url_for('static', filename='images/lugon.png') }}" alt="lab_logo" class="logo" width="200px"; height="200px">
+    <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/specialities">Our specialities</a>
+        <a href="/services">Our services</a>
+        <a href="/patient_log">Patient</a>
+        <a href="/logout_p">LOG OUT</a>
+    </nav>
+</header>
+
+  <div class="container">
+    <h2 class="fds">Technician Table</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Patient Name</th>
+          <th>ID appointment</th>
+          <th>ID analysis</th>
+          <th>Name of analysis</th>
+          <th>Date</th>
+          <th>result</th>
+          <th>Prescription</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for appointment in all_appointments %}
+        <tr>
+          <td>{{ appointment.patients.first_name}} {{appointment.patients.last_name}}</td>
+          <td>{{ appointment.id }}</td>
+          <td>{{ appointment.analyses.id}}</td>
+          <td>{{ appointment.analyses.name}}</td>
+          <td>{{ appointment.date }}</td>
+          <td>{{ appointment.result }}</td>
+          <td>{{ appointment.prescription }}</td>
+          <td>
+            <form action="/appointment/{{appointment.id}}/update" method="post">
+              <input value="ongoing" type="hidden" name="status">
+              <input type="datetime-local" name="date" class="btn btn-primary">
+              <input type="hidden" name="status" value="ongoing">
+              <input class="btn btn_primary" type="submit"  value="Confirm">
+            </form>
+            <form action="/appointment/{{ appointment.id }}/download_result" method="post">
+              
+              <input type="file"  name="result" class="form-control-file" download>
+              <input type="hidden" name="result" >
+              <input class="btn btn_primary" type="submit"  value="Confirm">
+            </form>
+          
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+
+</body>
+
+
+
+
+</footer>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

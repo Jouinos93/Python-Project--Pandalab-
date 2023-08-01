@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+.header{
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    height:100px;
+    max-width:100%;
+    padding: 2rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .navbar a{
+    font-size: 1rem;
+    color: rgb(114, 71, 179);
+    margin-left: 2rem;
+}
+.header .navbar a:hover{
+    color: rgb(108, 217, 234);
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+body{
+    background-image: url('/static/images/bb.jpg');
+    background-position: center;
+    background-size:cover;
+}
+
+
+.form-box{
+    position:relative;
+    width: 400px;
+    height: 500px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+
+}
+h2{
+    font-size: 2em;
+    color: #2b022e;
+    text-align: center;
+}
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #0b0b0b;
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #2b022e;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+input:focus ~ label,
+input:valid ~ label{
+top: -5px;
+}
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: #2b022e;
+}
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color:  #230225;
+    font-size: 1.2em;
+    top: 20px;
+}
+.forget{
+    margin: -15px 0 15px ;
+    font-size: .9em;
+    color: #2b022e;
+    display: flex;
+    justify-content: space-between;  
+}
+
+.forget label input{
+    margin-right: 3px;
+    
+}
+.forget label a{
+    color: #2b022e;
+    text-decoration: none;
+}
+.forget label a:hover{
+    text-decoration: underline;
+}
+button{
+    color: aliceblue;
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background:  #45024a;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+.register{
+    font-size: .9em;
+    color: #2b022e;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register p a{
+    text-decoration: none;
+    color: #2b022e;
+    font-weight: 600;
+}
+.register p a:hover{
+    text-decoration: underline;
+}
+footer .container{
+    color: #2b022e;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 70px;
+}
+    
+.icons{
+    width: 25px;height: 25px;
+    
+}
+.loc{
+    width:25px ;
+    height:40px ;
+}
+
+

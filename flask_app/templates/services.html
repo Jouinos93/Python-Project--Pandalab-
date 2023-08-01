@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_specialites.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_services.css') }}">
+</head>
+    <title>Services</title>
+</head>
+<style>
+  #overflowTest {
+    background: #ffffff;
+    color: white;
+    padding: 15px;
+    width: 1000px;
+    height: 500px;
+    overflow: scroll;
+    border: 1px solid #ccc;
+  }
+  </style>
+<body>
+  <header class="header">
+    <img src="{{ url_for('static', filename='images/lugon.png') }}" alt="lab_logo" class="logo" width="200px"; height="200px">
+    <nav class="navbar" >
+    <a href="/">Home</a>
+    <a href="/specialities">Our specialities</a>
+    <a href="/services">Our services</a>
+    <a href="/patient_log">Patient</a>
+    <a href="/admin_log">Admin</a>
+    </nav>
+  </header> <br>
+  <section class="services-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" id="serv">
+          <h2 class="section-title text-center" style="color: rgb(138, 10, 138);margin-top:80px">Services</h2>
+        </div>
+        
+      <div class="col-md-12">
+        <h6 class="section-title" style="color:  rgb(138, 10, 138)">Withdrawals:</h6>
+    </div>
+    <p>During the blood test, the patient is taken care of by an authorized health professional.</p>
+<p>The time slot (except for certain examinations) recommended for blood samples is in the morning before 11 a.m.
+  Depending on the prescribed examinations, certain specific conditions must be met.
+  Do not hesitate to inquire with the laboratory.</p><br>
+  <div class="col-md-12">
+    <h6 class="t" style="color:  rgb(138, 10, 138);">Fasting :</h6>
+</div>
+<p>A strict fast of 8 to 12 hours (do not eat anything,
+do not smoke and drink only non-carbonated water only) is necessary for the realization of the glycemia or a lipid balance (cholesterol, triglycerides, HDL and LDL )</p><br>
+<div class="col-md-12">
+  <h6 class="section-title" style="color:  rgb(138, 10, 138)">Diet and lifestyle :</h6>
+</div>
+<p>Dietary and even professional habits are important to know in order to interpret certain results: night work,
+tobacco consumption and even diet can influence the examinations to be carried out.</p><br>
+<div class="col-md-12">
+  <h6 class="t" style="color:  rgb(138, 10, 138);">Stress:</h6> 
+</div>
+<p>Stress causes the secretion of certain hormones: cortisol, prolactin, ….</p><br>
+<div class="col-md-12">
+  <h6 class="section-title" style="color:  rgb(138, 10, 138)">Bacteriological, parasitological and mycological samples:</h6>
+</div>
+<p>In general, it is desirable that you respect the recommendations
+  following: <br>
+. Perform the examination away from any local or general antibiotic or anti-infective treatment (at least 48 hours) <br>. Do not wash the areas to be sampled in the laboratory (secretions or pus) <br>
+. Identify any samples brought with their surname, first name, date of birth, date and time of collection on the label <br>. Hermetically close the bottle and place it in an airtight bag.</p>
+
+      </div>
+      <div class="col-md-12">
+        <h2 class="section-title" style="color:  rgb(138, 10, 138)">Analyses list</h2>
+      </div>
+      <div class="img_con">
+      <div id="overflowTest">
+
+        <img src="{{ url_for('static', filename='images/list.png') }}" alt="Image " class="image44" ><br>
+      
+        <img src="{{ url_for('static', filename='images/list2.png') }}"alt="Image " class="image44">
+      </div>
+    </div>
+
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <img src="{{ url_for('static', filename='images/lugon.png') }}" alt="lab_logo" class="logo" width="200px"; height="200px">
+    <div class="row">
+      <div class="col-m-4 footer-box">
+        <p> <b> contact us</b></p>
+        <p><img src="{{ url_for('static', filename='images/tel.png') }}" alt="phone_icon" class="icons"> 28 506 111</p>
+        <p><img src="{{ url_for('static', filename='images/email-removebg-preview.png') }}" alt="email_icon" class="icons"> panda_lab@gmail.com</p>
+        <p><img src="{{ url_for('static', filename='images/locali.png') }}" alt="loc_icon" class="loc"> 20,Ariana,Tunisie</p>
+        <p><img src="{{ url_for('static', filename='images/face.png') }}" alt="fb_icon" class="icons"> Panda laboratory</p>
+        <p> <img src="{{ url_for('static', filename='images/instag.png') }}" alt="insta_logo" class="icons"> Panda laboratory Tunisia</p>
+    
+    </div>
+    </div>
+    <div class="col-m-7 footer-box">
+      <p><b>biologistes at your disposal</b></p>
+      <p>Dr.Khouloud Chaabani</p>
+      <p>Dr.Aymen Khammasi</p>
+      <p>Dr.Mariem Jouini</p>
+      
+        </div>
+    
+    
+      </div>
+    
+    
+    </div>
+      </footer>
+    </body>
+    </html>
+    

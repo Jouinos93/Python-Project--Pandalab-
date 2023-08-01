@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+      <link rel="stylesheet" href="/panda_lab_project/flask_app/static/style_regist.css">
+
+      <!-- linking a css style sheet -->
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_regist.css') }}">
+    <style>
+      .register{
+        color: aliceblue;
+        width: 30%;
+        height: 40px;
+        border-radius: 40px;
+        background:  #45024a;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: 600;
+    }
+    </style> 
+  </head>
+  <body>
+    <header class="header">
+      <img src="{{ url_for('static', filename='images/lugon.png') }}" alt="lab_logo" class="logo" width="200px"; height="200px">
+      <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/specialities">Our specialites</a>
+        <a href="/services">Our services</a>
+        <a href="/patient_log">Patient</a>
+        <a href="/admin_log">Admin</a>
+      </nav>
+    </header> <br>
+
+    <div class="main">
+
+      <div class="form-box">
+        {%for message in get_flashed_messages(category_filter=["reg"])%}
+                  <p class="text-danger">{{message}}</p>
+                  {%endfor%}
+        <form action="/patient_register" method="post">
+          <h2 class="form-title">Patient Registration</h2>
+                <div class="main-user-info">
+                  <div class="user-input-box">
+                    <label for="first_Name">First Name</label>
+                    <input type="text" name="first_name" placeholder="Enter your First Name">
+                  </div>
+
+                  <div class="user-input-box">
+                    <label for="Last_name">Last Name</label>
+                    <input type="text" name="last_name" placeholder="Enter your Last Name">
+                  </div>
+
+                  <div class="user-input-box">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="select your email">
+                  </div>
+
+                  <div class="user-input-box">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Enter your password">
+                  </div>
+
+                  <div class="user-input-box">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" name="confirm_password" placeholder="Confirm Password">
+                  </div>
+
+                  <div class="user-input-box">
+                    <label for="age">Age</label>
+                    <input type="number" name="age" placeholder="Enter your Age">
+                  </div>
+
+                  <div class="user-input-box">
+                    <label >Gender</label>
+                      <select  name="gender" class="user-input-boxe">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                      </select>
+        
+                  </div>
+                  <div class="user-input-box">
+                    <label for="phone_number">Phone Number</label>
+                    <input type="number" name="phone_number" placeholder="Enter your Number">
+                  </div>
+                  
+                  
+                  <input class="register" type="submit" value="REGISTER" >
+                               
+        
+                </div>
+                
+        </form>
+      </div>
+  </div>
+  <footer>
+    <div class="container">
+        <img src="{{ url_for('static', filename='images/lugon.png') }}" alt="lab_logo" class="logo" width="200px"; height="200px">
+    <div class="row">
+    <div class="col-md-4 footer-box">
+        <p> <b> contact us</b></p>
+        <p><img src="{{ url_for('static', filename='images/tel.png') }}" alt="phone_icon" class="icons"> 28 506 111</p>
+            <p><img src="{{ url_for('static', filename='images/email-removebg-preview.png') }}" alt="email_icon" class="icons"> panda_lab@gmail.com</p>
+            <p><img src="{{ url_for('static', filename='images/locali.png') }}" alt="loc_icon" class="loc"> 20,Ariana,Tunisie</p>
+            <p><img src="{{ url_for('static', filename='images/face.png') }}" alt="fb_icon" class="icons"> Panda laboratory</p>
+            <p> <img src="{{ url_for('static', filename='images/instag.png') }}" alt="insta_logo" class="icons"> Panda laboratory Tunisia</p>
+    
+    </div>
+    </div>
+    <div class="col-md-7 footer-box">
+        <p><b> Biologistes at your disposal</b></p>
+        <p>Dr.Khouloud Chaabani</p>
+        <p>Dr.Aymen Khammasi </p>
+        <p>Dr. Mariem Jouini</p>
+        </div>
+    </div>
+    </footer>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

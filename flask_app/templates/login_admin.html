@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/panda_lab_project/flask_app/static/style_home.css">
+    <!-- linking a css style sheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_log.css') }}">
+  <title>Login patient</title>
+</head>
+<body>
+    <header class="header">
+        <img src="{{ url_for('static', filename='images/lugon.png') }}" alt="lab_logo" class="logo" width="200px"; height="200px">
+        <nav class="navbar">
+            <a href="/">Home</a>
+            <a href="/specialities">Our specialites</a>
+            <a href="/services">Our services</a>
+            <a href="/patient_log">Patient</a>
+            <a href="/admin_log">Admin</a>
+        </nav>
+    </header>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="/admin_login" method="POST">
+                    <h2>Admin Login</h2>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" name="email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input name="password" type="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <button >Log in</button>
+                </form> 
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <img src="{{ url_for('static', filename='images/lugon.png') }}" alt="lab_logo" class="logo" width="200px"; height="200px">
+        <div class="row">
+        <div class="col-md-4 footer-box">
+            <p> <b> contact us</b></p>
+            <p><img src="{{ url_for('static', filename='images/tel.png') }}" alt="phone_icon" class="icons"> 28 506 111</p>
+            <p><img src="{{ url_for('static', filename='images/email-removebg-preview.png') }}" alt="email_icon" class="icons"> panda_lab@gmail.com</p>
+            <p><img src="{{ url_for('static', filename='images/locali.png') }}" alt="loc_icon" class="loc"> 20,Ariana,Tunisie</p>
+            <p><img src="{{ url_for('static', filename='images/face.png') }}" alt="fb_icon" class="icons"> Panda laboratory</p>
+            <p> <img src="{{ url_for('static', filename='images/instag.png') }}" alt="insta_logo" class="icons"> Panda laboratory Tunisia</p>
+        
+        </div>
+        </div>
+        <div class="col-md-7 footer-box">
+            <p><b> Biologistes at your disposal</b></p>
+            <p>Dr.Khouloud Chaabani</p>
+            <p>Dr.Aymen Khammasi </p>
+            <p>Dr. Mariem Jouini</p>
+            </div>
+        
+        
+        
+        
+        
+        </div>
+        </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

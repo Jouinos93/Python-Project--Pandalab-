@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>LogReg</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+    <style>
+        .container {
+            display: flex;
+           
+        }
+        .user{
+            margin-right: 400px;
+        }
+        .box{
+            border: 3px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <img src="{{ url_for('static', filename='images/lugon.png') }}" alt="lab_logo" class="logo" width="200px"; height="200px">
+        <nav class="navbar">
+            <a href="/">Home</a>
+            <a href="/specialities">Our specialities</a>
+            <a href="/services">Our services</a>
+            <a href="/patient_log">Patient</a>
+            <a href="/logout_p">LOG OUT</a>
+        </nav>
+    </header>
+    <div class="all">
+    <div class="container fe">
+        <div class="user acc">
+            <!-- <form action="/user/{{user.id}}/update" method="post"> -->
+            <div class="top">
+                <img src="{{ url_for('static', filename='profile.png') }}" alt="">
+                <h1>Update User</h1>
+            </div>
+            
+            <form action="/patient/<patient_id>/update" method="post">
+                <input type="hidden" value="patient_id" name="patient_id">
+                
+                <input type="hidden" value="patient_id" name="patient_id">
+                <div class="form-group">
+                    <label for="">First Name</label>
+                    <input type="text" name="first_name" class="form-control" > 
+                </div>
+                <div class="form-group">
+                    <label for="">Last Name</label>
+                    <input type="text" name="last_name" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="email" name="email" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" name="password" class="form-control" >
+                </div>
+                {%for message in get_flashed_messages(category_filter=["va"])%}
+                <p class="text-danger">{{message}}</p>
+                {%endfor%}
+                <button class="btn btn1 btn-success" type="submit" >Update</button>
+                <!-- <input type="hidden" value="user_id" name="user_id"> -->
+            </form>
+        </div> -->
+        <!-- <div class="feedback acc"> -->
+            <!-- <form action="/user/{{user.id}}/update" method="post"> -->
+            <!-- <div class="top">
+                <img src="{{ url_for('static', filename='feed.png') }}" alt="">
+                <h1>Feedback</h1>
+            </div>
+            
+            <form> -->
+                
+                <!-- <input type="hidden" value="user_id" name="user_id"> -->
+                
+                <!-- <div class="feed">
+                    Your feedbacks
+                </div> -->
+                <!-- {%for message in get_flashed_messages(category_filter=["va"])%}
+                <p class="text-danger">{{message}}</p>
+                {%endfor%} -->
+                <!-- <button class="btn btn1 btn-success" type="submit" >Delete</button>
+                 -->
+                <!-- <input type="hidden" value="user_id" name="user_id"> -->
+            <!-- </form>
+        </div> -->
+
+        <!-- <div class="magazine">
+        <h1>User's Magazine</h1>
+             <div class="box">
+                {%for magazine in all_magazines%}
+                <h6>{{magazine.title}} <a href="/magazine/{{magazine.id}}/destroy/">delete</a></h6>
+               {%endfor%} 
+            </div>
+        </div> -->
+    </div>
+    
+</div>
+</body>
+</html>
